@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #f5abc9;
+        color: gray;
+      }
+      .top-container {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        background-image: url("https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTkxfHxzdHVkeXxlbnwwfHwwfHx8MA%3D%3D");     
+        background-size: cover;
+        width: 100%;   
+        display: flex;
+        justify-content: center;
+        height: 200px;
+        align-items: center;
+        text-align: center;
+        background-position: bottom;
+        background-size: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+      }
+      .top-container h1 { 
+        /* color: rgb(247, 104, 88); */
+        color: white;
+        font-size: 4rem;
+        letter-spacing: .5rem;
+        font-weight: 500;
+        text-shadow: 4px 8px 8px rgba(0, 0, 0, .6);
+      }
+      img {
+        display: block;
+        width: 100%;
+        border-radius: .5rem;
+        object-fit: cover;
+        /* height: 40rem; */
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+      }
+      .section-center {
+        width: 90vw;
+        margin: 0 auto;
+        max-width: 1179px;
+        min-width: 340px;
+        padding: 5rem 0;
+        /* border: 2px solid red; */
+      }
+      .tabs {
+        background-color: #ffe5e2;
+        border-radius: .5rem;
+        grid-template-rows: auto 1fr;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+      }
+      .btn-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .button:nth-child(1) {
+        border-top-left-radius: .5rem;
+      }
+      .button:nth-child(3) {
+        border-top-right-radius: .5rem;
+      }
+      p {
+        font-size: 0.9rem;
+        font-family: veranda, Gulim, sans-serif;
+        line-height: 1.5rem;
+        font-weight: 700;
+      }
+      li {
+        margin-bottom: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      ul {
+        list-style-type: none;
+      }
+      .button {
+        padding: 1rem 0;
+        border: none;
+        font-size: 1rem;
+        background-color: #b6c9f0;
+        cursor: pointer;
+        transition: all .3s linear;
+        letter-spacing: .25rem;
+      }
+      .button:hover:not(.live) {
+        background-color: #e93b81;
+        color: white;
+      }
+      .tabs-content {
+        padding: 2rem 1.5rem;
+      }
+      @media (min-width: 992px) {
+        .image {
+          margin-bottom: 0;
+        }
+        .section-center {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 2rem;
+        }
+      }
+      .content {
+        display: none;
+      }
+      .content.live {
+        display: block;
+      }
+      .button.live {
+        background-color: #ffe5e2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-container">
+      <h1>Welcome to our SAT Math</h1>
+    </div>
+    <div class="section-center">
+
+      <div class="image">
+        <img src="https://m.media-amazon.com/images/I/61C3Gc3hjXL._SL1360_.jpg" alt="">
+      </div>
+      <div class="tabs">
+        <div class="btn-container">
+          <button class="button live" data-id="step1">Our Team</button>
+          <button class="button" data-id="step2">Introduction</button>
+          <button class="button" data-id="step3">Contact</button>
+        </div>
+        <div class="tabs-content">
+          <div class="content live" id="step1">
+            <h3>소개<h3>
+            <p>한국에서 교육을 받은 사람들이라면 대분분 수학공부하면 문제풀이부터 생각하게 되죠.  하지만 미국와서 여기 아이들이 수학공부 하는 거 보고, 내가 수학을 잘 못 배웠구나 하는 거를 알게 되었습니다. 여기 수학 교과서를 보는 순간, 이렇게 배워면 수학이 재미있겠구나하는 걸 느끼게 되었고, 아이들에게 어떻게 하면 흥미를 느끼면서 공부시킬 수 있겠구나하는 아이디어가 생겼습니다. 그래서 미들, 하이 학생들을 지도하게 되었습니다. 아마 10년은 넘게 된 것 같아요. 
+            </p>
+              <p> 그런데, 아이들 부모중, 특히 한국인 부모들은 한국에서 익힌 습관대로 미국에 살면서도 아이들한테 문제집을 주면서 풀라고 강요하고 있더라구요. 그게 아이들한테 수학의 흥미를 잃게하는 지름길인대도요… 저는 수업시간에 새로운 개념을 설명할 때 아이들한테 질문부터 시작합니다. 대답하면 그 거에 더 나아가서 또 질문하고…  ‘아하 이래서 이렇구나…’할 때까지요. 그런 다음 문제풀기하면 아이들이 생각을 하면서 풀기 시작하죠… </p>
+              <p>제가 학생들한테 강조하는 것 중 하나는 “Read a math textbook”, just relax on the sofa and enjoy what is written on the textbook. You don't even hold your pencil." 미국 수학 교과서는 상당히 두껍고 박사님들 여러분이 심혈을 기울여서 만든 책입니다. 그런데, 대부분의 아이들 쳐다 보지 않죠? 제가 가르친 학생들 중 하나가 저한테 한말 “look, this is what you said, o math is fun” 그러니 집에서 한번 시도해 보세요. “얘들아, 여기 소파에서 수학책 한번 읽어 볼래?”
+            </p> 
+            <p>
+            위의 이야기는 학교에서 배우는 수학 수업에 관한 거입니다. 이번 SATmath 시리즈는 대면수업이 아니라 미리 녹음된 강의라서 이런 부분은 좀 부족하지만 학생들에 따라서는 프리켈 아니면 알제브라 2는 공부한 경우라서 개념을 리마인드하게끔 설명이 되어 있습니다. 그리고 문제들 중에 난이도가 있는 문제들을 골라서 설명을 했구요. 전체 시리즈를 끝내고 나면 시험에 필요한 토픽은 다 리뷰가 될 거라고 봅니다. 그런 다음 다른 SAT 문제들을 풀 때 도움이 많이 되리라 봅니다.     
+          </p>
+          </div>
+          <div class="content" id="step2">
+            <h3>강의
+            <p>
+              이 강의는 Nielson Phu의 "The College Panda SAT Math"를 기반으로 하고 있으며 학생들에게 잘 알려진 책으로 SAT 시험의 모든 주제를 다룹니다.
+            </p>
+            <p>
+              학생들은 집에서 비디오 강의 수업 자료을 듣고 자신의 속도로 학습할 수 있습니다. 각 강의는 대략 1시간 동안이며 개념에 대해 자세히 설명하며 선택된 문제에 대한 해설로 이루어져 있습니다. 비디오마다 강의 내용에 해당하는 단원이 표시되어 있어서 자신한테 필요한 부분을 골라서 공부할 수 있습니다. 
+            <p>
+              접속방법:  등록 후 학생들은 Canvas 라는 플랫폼에서 녹화된 강의를 볼 수 있습니다. 
+            </p>
+            <p>
+              <strong>강의 내용:</strong>
+            </p>
+            <ul>
+              <li><strong>Lecture 1 : </strong>SAT Math Chs 1, 2, 3</li>
+              <li><strong>Lecture 2 : </strong>SAT Math Chs 4, 5, 6, 7</li>
+              <li><strong>Lecture 3 : </strong>SAT Math Chs 8, 9, 10, 11</li>
+              <li><strong>Lecture 4 : </strong>SAT Math Chs 12, 13, 14</li>
+              <li><strong>Lecture 5 : </strong>SAT Math Chs 15, 16, 17</li>
+              <li><strong>Lecture 6 : </strong>SAT Math Chs 18, 19, 20, 21</li>
+              <li><strong>Lecture 7 : </strong>SAT Math Chs 21, 22, 23</li>
+              <li><strong>Lecture 8 : </strong>SAT Math Chs 24, 25, 26, 27</li>
+              <li><strong>Lecture 9 : </strong>SAT Math Ch 28 (duration - 10 min and 29 sec)</li>
+            </ul>
+          </h3>
+          </div>
+          <div class="content" id="step3">
+            <h3>Contact
+            <!-- <p>
+              <strong>Tuition:</strong> $70 (whole lecture series)
+            </p>
+            <p>
+              <strong>Payment method:</strong> Zelle or Venmo
+            </p> -->
+            <p>
+              Contact me for more information or registration at email: 
+            </p>
+            <p style="margin-left: 30px">
+              <strong>writinghood249@gmail.com</strong> 
+            </p>
+          </h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script>
+      const tabs = document.querySelector('.tabs');
+      const btns = document.querySelectorAll('.button');
+      const articles = document.querySelectorAll('.content');
+
+      tabs.addEventListener('click', (event) => {
+        const id = event.target.dataset.id;    // "step1" "step2" "step3"
+        if (id) {
+          /* remove selectred from all the buttons */
+          btns.forEach((button) => {
+            button.classList.remove('live');
+          });
+           /* event.target is the clicked button */
+          event.target.classList.add('live');
+
+          /* hide other articles */
+          articles.forEach((article) => {
+            article.classList.remove('live');
+          });
+          const element = document.getElementById(id);
+          element.classList.add('live');
+        }
+
+      });
+    </script>
+  </body>
+</html>
